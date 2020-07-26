@@ -33,7 +33,9 @@ const createSlug = (data) => {
   const { slug, id, title, items } = data;
   const liNav = document.createElement("li");
   const sectionName = document.querySelector("#sectorName");
-  const sectionCards = document.querySelector("#expandedShowItems");
+  const liCards = document.querySelector("#liShowItems");
+  const navItems = document.querySelector("#navItems");
+  //const sectionCards = document.querySelector("#expandedShowItems");
   const clearUl = document.querySelector("#slug").childNodes;
 
   liNav.classList.add("list-group-item", "p-2");
@@ -47,13 +49,15 @@ const createSlug = (data) => {
     clearUl.forEach((data) => data.classList.remove("bg-light"));
     liNav.classList.add("bg-light");
 
+    navItems.classList.remove("d-none");
+
     sectionName.innerText = "";
     sectionName.innerHTML = `<h3 class="h4 pt-1">${title}</h3>`;
 
-    sectionCards.innerText = "";
+    liCards.innerText = "";
     items.forEach((data) => {
       const card = cardBody(data);
-      sectionCards.append(card);
+      liCards.append(card);
 
       // console.log(`*** createItems.card-${slug}=>`, card);
     });
@@ -75,7 +79,7 @@ const cardBody = (data) => {
 
     liCard.innerText = "";
     liCard.innerHTML = `
-    <div class="card, fade-in, shadow-sm">
+    <div class="card card-li fade-in shadow-sm border-0 grow">
       <a data-fancybox="gallery" href="${imageFetch}">
         <img src="${imageFetch}" class="card-img align-self-center p-4" alt="${name}">
       </a>

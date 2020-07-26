@@ -1,8 +1,12 @@
 .card {
-  max-width: 190px;
+  max-width: 220px;
+  max-height: 315px;
+  height: 285px;
   width: 190px;
-  max-height: 285px;
-  display: inline-block;
+}
+.card-li {
+  width: 220px;
+  height: 315px;
 }
 
 .fade-in {
@@ -14,15 +18,65 @@
   -ms-animation: fadeIn ease 2.8s;
 }
 
-.fade-in:hover {
-  transform: scale(1.05);
-}
-
 .text-footer {
   position: absolute;
   bottom: -10px;
 }
 
+/* sidenav interactive */
+li {
+  list-style: none;
+}
+
+.sidenav {
+  margin-top: 12vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  padding: 7px 5px;
+  background: #f4f4f442;
+}
+
+.sidenav ul {
+  display: flex;
+}
+
+.sidenav ul li {
+  flex: 1 0 60px;
+}
+
+.sidenav li .card {
+  margin: 10px 10px 10px 0;
+}
+
+/* webkit scrollbar */
+.scroll::-webkit-scrollbar {
+  max-width: 7px;
+  height: 12px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: rgba(211, 211, 211, 0.45);
+  border: 4px solid transparent;
+  border-radius: 8px;
+}
+.scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(185, 185, 185, 0.55);
+}
+
+.grow:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 500px) {
+  .scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(185, 185, 185, 0.35);
+    border: 4px solid transparent;
+    border-radius: 8px;
+  }
+}
+/* fade-in keyframes */
 @keyframes fadeIn {
   0% {
     opacity: 0;
