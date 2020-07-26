@@ -1,0 +1,69 @@
+.card {
+  max-width: 190px;
+  width: 190px;
+  max-height: 285px;
+  display: inline-block;
+}
+
+.fade-in {
+  transition: all 0.2s ease-in-out;
+  animation: fadeIn ease 2.8s;
+  -webkit-animation: fadeIn ease 2.8s;
+  -moz-animation: fadeIn ease 2.8s;
+  -o-animation: fadeIn ease 2.8s;
+  -ms-animation: fadeIn ease 2.8s;
+}
+
+.fade-in:hover {
+  transform: scale(1.05);
+}
+
+.text-footer {
+  position: absolute;
+  bottom: -10px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
