@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <title>Title</title>
+    <title>InstaBuy</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -21,38 +21,127 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <!-- main style -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div class="container container-fluid">
+    <!-- navbar -->
+
+    <div
+      class="container container-fluid shadow"
+      style="background: #fcfcfc;"
+      id="slideTop"
+    >
+      <div class="sticky-top">
+        <div
+          class="bg-white shadow border rounded-bottom d-flex justify-content-between"
+        >
+          <div></div>
+
+          <a class="text-center" href="#slideTop" title="Voltar ao topo">
+            <img
+              class="py-3 logo"
+              src="assets/img/logo-success.png"
+              alt="Logo Instabuy"
+            />
+          </a>
+
+          <div class="btn-group">
+            <button class="btn btn-outline-light">
+              <i class="fas fa-search text-dark"></i>
+            </button>
+
+            <button class="btn btn-outline-light">
+              <i class="fas fa-shopping-cart text-dark"></i>
+            </button>
+          </div>
+        </div>
+
+        <nav class="navbar" style="z-index: 9999; max-height: 0;">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown drop-icon">
+              <button
+                class="btn btn-light"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                title="Setores"
+              >
+                <i class="fa fa-bars"></i>
+              </button>
+
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdown"
+                id="slug"
+                style="min-width: 50px !important;"
+              ></div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
       <nav class="mb-3">
         <div class="d-flex justify-content-around">
-          <ul class="list-group list-group-horizontal" id="slug"></ul>
+          <ul class="list-group list-group-horizontal"></ul>
           <div class="text-primary fade-in" id="sectorName"></div>
         </div>
       </nav>
 
       <div class="row">
-        <div class="col-md">
-          <nav class="sidenav scroll shadow rounded d-none" id="navItems">
+        <div class="col-md mt-2">
+          <img
+            class="w-100 rounded mb-5 shadow"
+            src="assets/img/bnr-3925664f384c47dcadb698bdc6d971c4.jpeg"
+            alt=""
+            id="imgCarousel"
+          />
+
+          <main class="mb-5" id="mainViewItems"></main>
+
+          <nav class="sidenav scroll shadow rounded mb-5 d-none" id="navItems">
+            <a
+              class="sticky-icon"
+              href="#"
+              title="Ver expandido"
+              id="backMainView"
+            >
+              <i class="fas fa-long-arrow-alt-left"></i>
+            </a>
             <ul class="m-0 p-0" id="liShowItems"></ul>
+            <a
+              class="sticky-icon"
+              href="#"
+              title="Ver expandido"
+              id="iconShowItems"
+            >
+              <i id="iconOpen" class="fas fa-search-plus"></i>
+            </a>
           </nav>
 
-          <div class="d-flex flex-wrap" id="expandedShowItems"></div>
+          <div class="col-md">
+            <div class="mt-0 row" id="iconExp"></div>
+
+            <div
+              class="d-flex flex-wrap mb-5 shadow"
+              id="expandedShowItems"
+              style="display: none !important;"
+            ></div>
+          </div>
         </div>
       </div>
-
-      <footer class="fixed-bottom">
-        <img
-          class="w-100"
-          src="assets/img/bnr-5eab44a74a2b482d8b9a2f7f7f62239d.jpeg"
-          alt=""
-        />
-      </footer>
     </div>
 
     <script src="assets/js/index.js"></script>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

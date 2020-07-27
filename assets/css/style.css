@@ -1,12 +1,96 @@
+body {
+  background: #dfdfdf;
+}
+a {
+  text-decoration: none !important;
+}
+
+/* logo */
+.logo {
+  margin: 0 auto !important;
+  width: 15% !important;
+}
+
+/**/
+.sticky-icon {
+  position: sticky;
+  left: 98%;
+  z-index: 999;
+  color: #919291;
+  font-weight: bold;
+}
+
+.sticky-icon:hover {
+  color: rgba(235, 28, 28, 0.822);
+  cursor: pointer;
+}
+
+.sticky-title {
+  position: sticky;
+  left: 0;
+  z-index: 999;
+  color: rgb(2, 136, 47) !important;
+  font-size: 22px;
+  margin-left: 10px;
+}
+
 .card {
-  max-width: 220px;
-  max-height: 315px;
-  height: 285px;
+  height: 265px;
   width: 190px;
 }
+
+.buyIcon {
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0;
+  background: rgb(255, 255, 255);
+}
+
+.buyIcon-min {
+  font-size: 15px;
+  top: 170px;
+  left: 120px;
+  width: 23px;
+  height: 23px;
+  border-radius: 23px;
+}
+
+.buyIcon-max {
+  font-size: 23px;
+  top: 180px;
+  left: 147px;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+}
+
+.buyIcon-large {
+  font-size: 23px;
+  top: 232px;
+  left: 172px;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+}
+
 .card-li {
   width: 220px;
   height: 315px;
+}
+
+.card-li-large {
+  width: 220px;
+  height: 345px;
+}
+
+.card-min {
+  width: 155px;
+  height: 300px;
+}
+
+.card-max {
+  height: 295px !important;
 }
 
 .fade-in {
@@ -62,6 +146,7 @@ li {
   border-radius: 8px;
 }
 .scroll::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
   background: rgba(185, 185, 185, 0.55);
 }
 
@@ -69,9 +154,26 @@ li {
   transform: scale(1.05);
 }
 
-@media (max-width: 500px) {
+/* sanduiche icon */
+.drop-icon {
+  top: -65px;
+}
+
+@media (max-width: 540px) {
+  .drop-icon {
+    top: -58px;
+  }
+
+  .logo {
+    min-width: 25% !important;
+    min-height: 100% !important;
+  }
+
+  .sticky-icon {
+    left: 96.5%;
+  }
+
   .scroll::-webkit-scrollbar-thumb:hover {
-    background: rgba(185, 185, 185, 0.35);
     border: 4px solid transparent;
     border-radius: 8px;
   }
