@@ -165,8 +165,7 @@ li {
   }
 
   .logo {
-    min-width: 25% !important;
-    min-height: 100% !important;
+    display: none;
   }
 
   .sticky-icon {
