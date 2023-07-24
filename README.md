@@ -1,6 +1,6 @@
 # Instabuy | fetch API
 
-Veja na íntegra: [Instabuy](https://keys8410.github.io/instabuy/).
+Veja na íntegra: [Instabuy](https://yan-almeida.github.io/instabuy).
 
 ## Tecnologias
   - HTML
